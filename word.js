@@ -6,4 +6,12 @@ function Word(word){
     this.LetterArr;
     arr.forEach(element => LetterArr.push(new Letter(element)));
 
+
+    this.toString = function (){
+        console.log(LetterArr.forEach(element => element.toString()))
+    }
+
+    this.takeGuess = function(char){
+        
+    }
 }
