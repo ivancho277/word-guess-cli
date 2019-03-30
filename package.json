@@ -1,0 +1,22 @@
+{
+  "name": "word-guess-cli",
+  "version": "1.0.0",
+  "description": "A console node application that plays a word guess game with the user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivancho277/word-guess-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivancho277/word-guess-cli/issues"
+  },
+  "homepage": "https://github.com/ivancho277/word-guess-cli#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}

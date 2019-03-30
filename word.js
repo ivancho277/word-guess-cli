@@ -1,9 +1,10 @@
-import Letter from "letter.js";
+var Letter = require("./letter")
+
 
 function Word(word){
     this.word = word;
-    this.arr = word.slpit("");
-    this.LetterArr;
+    this.arr = word.split("");
+    this.LetterArr = LetterArr;
     arr.forEach(element => LetterArr.push(new Letter(element)));
 
 
@@ -12,6 +13,8 @@ function Word(word){
     }
 
     this.takeGuess = function(char){
-        
+        LetterArr.forEach(element => {element.check(char)});
     }
 }
+
+module.exports = Word;

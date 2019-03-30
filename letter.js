@@ -20,4 +20,4 @@ function Letter(char){
 
 }
 
-module.exports = Letter;
+module.exports = Letter
