@@ -15,7 +15,7 @@ function askForLetter(){
         }
     ]).then(res => {
         console.log(res.guess)
-        var word = new Word("Spongebob")
+        var word = new Word("spongebob")
         word.takeGuess(res.guess)
       //  word.toString()
     })

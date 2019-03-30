@@ -1,6 +1,6 @@
 function Letter(char){
     this.char = char;
-    this.guessed ;
+    this.guessed = false;
 
     this.toString = function(){
         if(this.guessed){
@@ -14,8 +14,7 @@ function Letter(char){
         if(char === this.char){
             this.guessed = true;
         }
-        else 
-            this.guessed = false;
+       
     }
 
 }
