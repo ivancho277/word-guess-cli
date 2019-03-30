@@ -8,19 +8,25 @@ function createRandomWords(){
 
 function askForLetter(){
     inquirer.prompt([
-
+        {
+        type: 'input',
+        name: "guess",
+        message: "Please guess a single Letter: "
+        }
     ]).then(res => {
-        
+        console.log(res.guess)
+        var word = new Word("Spongebob")
+        word.toString()
     })
 }
 
 
 
 function play(){
-    var guessed = process.argv[2];
-    var word = new Word("Spongebob")
-    word.takeGuess(guessed);
-    word.toString();
+    askForLetter()
+   // var word = new Word("Spongebob")
+    
+   // word.toString();
 
 }
 play()
