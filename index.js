@@ -10,7 +10,9 @@ function createRandomWords(){
 }
 
 
+
 function play(){
+    var guessed = process.argv[2];
     var word = new Word("Spongebob")
     word.toString();
 

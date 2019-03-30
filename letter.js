@@ -1,9 +1,9 @@
 function Letter(char){
     this.char = char;
-    this.guessed;
+    this.guessed = false;
 
     this.toString = function(){
-        if(guessed){
+        if(this.guessed){
             console.log(char);
         }
         else
@@ -12,10 +12,10 @@ function Letter(char){
 
     this.check = function(char){
         if(char === this.char){
-            guessed = true;
+            this.guessed = true;
         }
         else 
-            guessed = false;
+            this.guessed = false;
     }
 
 }
