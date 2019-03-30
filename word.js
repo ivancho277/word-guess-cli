@@ -14,6 +14,7 @@ function Word(word){
 
     this.takeGuess = function(char){
         this.LetterArr.forEach(element => {element.check(char)});
+        this.toString();
     }
 }
 
