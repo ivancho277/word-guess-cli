@@ -7,7 +7,6 @@ function Word(word){
     this.LetterArr = this.arr.map(element => (new Letter(element)));
     //this.arr.forEach(element => this.LetterArr.push(new Letter(element)));
 
-
     this.toString = function (){
         console.log(this.LetterArr.forEach(element => element.toString()))
     }

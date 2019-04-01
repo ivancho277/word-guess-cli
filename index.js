@@ -2,8 +2,9 @@ var Word = require("./word.js")
 var inquirer = require('inquirer')
 
 function createRandomWords(){
-    var wordArr = ["Spongebob Squarepants"]
-    return wordArr;
+    var wordArr = ["spongebob squarepants","angry beavers", "catdog", "dexter's laboritory"]
+    var rand = Math.floor(Math.random() * wordArr.length)
+    return wordArr[rand];
 }
 
 function askForLetter(wordObj, count){
@@ -20,7 +21,6 @@ function askForLetter(wordObj, count){
     ]).then(res => {
         //console.log(res.guess)
         //var word = new Word("spongebob")
-
         wordObj.takeGuess(res.guess);
         count--;
         console.log(count);
@@ -30,17 +30,9 @@ function askForLetter(wordObj, count){
 }
 }
 
-
-
 function play(){
     var guesses = 10;
-    var word = new Word("spongebob")
+    var word = new Word(createRandomWords())
     askForLetter(word, guesses)
-    
-    
-   // var word = new Word("Spongebob")
-    
-   // word.toString();
-
 }
 play()
