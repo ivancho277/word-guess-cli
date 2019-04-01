@@ -6,7 +6,7 @@ function createRandomWords(){
     return wordArr;
 }
 
-function askForLetter(wordObj){
+function askForLetter(wordObj, count){
     
     inquirer.prompt([
         {
@@ -15,10 +15,12 @@ function askForLetter(wordObj){
         message: "Please guess a single Letter: "
         }
     ]).then(res => {
-        console.log(res.guess)
+        //console.log(res.guess)
         //var word = new Word("spongebob")
+        count--;
         wordObj.takeGuess(res.guess)
-        askForLetter(wordObj);
+        console.log(count)
+        askForLetter(wordObj, count);
       //  word.toString()
     })
 }
@@ -28,7 +30,7 @@ function askForLetter(wordObj){
 function play(){
     var guesses = 10;
     var word = new Word("spongebob")
-    askForLetter(word)
+    askForLetter(word, guesses)
     
     
    // var word = new Word("Spongebob")
