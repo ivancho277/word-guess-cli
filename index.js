@@ -5,9 +5,9 @@ function createRandomWords(){
     var wordArr = ["Spongebob Squarepants"]
     return wordArr;
 }
-
+var word = new Word("spongebob")
 function askForLetter(){
-    var word = new Word("spongebob")
+    
     inquirer.prompt([
         {
         type: 'input',
@@ -16,7 +16,7 @@ function askForLetter(){
         }
     ]).then(res => {
         console.log(res.guess)
-        var word = new Word("spongebob")
+        //var word = new Word("spongebob")
         word.takeGuess(res.guess)
         askForLetter();
       //  word.toString()
