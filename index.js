@@ -7,7 +7,10 @@ function createRandomWords(){
 }
 
 function askForLetter(wordObj, count){
-    
+    if(count === 0){
+        console.log("GAME OVER")
+    }
+    else{
     inquirer.prompt([
         {
         type: 'input',
@@ -17,12 +20,14 @@ function askForLetter(wordObj, count){
     ]).then(res => {
         //console.log(res.guess)
         //var word = new Word("spongebob")
+
+        wordObj.takeGuess(res.guess);
         count--;
-        wordObj.takeGuess(res.guess)
-        console.log(count)
+        console.log(count);
         askForLetter(wordObj, count);
       //  word.toString()
     })
+}
 }
 
 

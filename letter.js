@@ -1,9 +1,10 @@
 function Letter(char){
     this.char = char;
     this.guessed = false;
-
+    this.string;
     this.toString = function(){
         if(this.guessed){
+            
             console.log(char);
         }
         else
