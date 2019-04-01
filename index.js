@@ -2,7 +2,7 @@ var Word = require("./word.js")
 var inquirer = require('inquirer')
 
 function createRandomWords(){
-    var wordArr = ["spongebob squarepants","angry beavers", "catdog", "dexter's laboritory"]
+    var wordArr = ["spongebobsquarepants","angrybeavers", "catdog", "dexter'slaboritory"]
     var rand = Math.floor(Math.random() * wordArr.length)
     return wordArr[rand];
 }
